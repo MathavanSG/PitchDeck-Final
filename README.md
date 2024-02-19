@@ -1,59 +1,40 @@
-![Binaryhood](Logo/BinaryhoodLogo.png)
+![image](https://github.com/CyberSnowTeam/PitchDeck/assets/121884337/3ceddf14-c2db-4cc4-9008-95dedb9816a2)
+# Pitch Deck PDF Analysis Chatbot
 
-# ChatBot
+## Project Overview:
+This project implements a chatbot capable of analyzing pitch deck PDF files uploaded by users. The chatbot extracts text from the PDFs, performs text analysis, and engages in conversation with users based on their queries regarding the pitch deck content.
 
-## Installation & Setup
+## Technologies Used:
+- **Flask:** Flask is a micro web framework for Python used to develop web applications.
+- **Pytesseract:** Pytesseract is a Python wrapper for Google's Tesseract-OCR Engine, used for optical character recognition (OCR).
+- **pdf2image:** This library is used to convert PDF files to images, facilitating text extraction from PDFs.
+- **langchain:** langchain is a library for conversational AI and natural language processing tasks. It provides tools for text splitting, embeddings, vector stores, and conversation management.
+- **OpenAIEmbeddings:** OpenAIEmbeddings is used for generating embeddings of text chunks.
+- **FAISS:** FAISS is a library for efficient similarity search and clustering of dense vectors.
+- **DuckDuckGoSearchAPIWrapper:** DuckDuckGoSearchAPIWrapper is utilized for fetching search results from DuckDuckGo search engine.
+- **dotenv:** dotenv is used to load environment variables from a .env file.
+- **Werkzeug:** Werkzeug is a WSGI (Web Server Gateway Interface) utility library for Python, providing necessary functionalities for handling file uploads.
 
-[Install Python] https://www.dataquest.io/blog/installing-python-on-mac/
+## Setup Instructions:
+1. Install Python and Flask if not already installed.
+2. Install Tesseract-OCR and add its path to the system environment variables.
+3. Clone the project repository
+4. Navigate to the project directory.
+5. Install the required Python packages by running: `pip install -r requirements.txt`.
+6. Create a `.env` file and define the necessary environment variables.
+7. Run the Flask application by executing `python app.py`.
+8. Access the chatbot interface through a web browser.
 
-[Install pip] https://phoenixnap.com/kb/install-pip-mac
+## Usage:
+- Visit the home route of the Flask application to access the chatbot interface.
+- Upload a pitch deck PDF file for analysis.
+- The chatbot will extract text from the PDF and initialize a conversation with the user.
+- Users can ask queries related to the pitch deck content.
+- The chatbot will respond based on the analyzed content of the uploaded PDF.
 
-If you have Python & pip installed then check their version in the terminal or command line tools
+## Contributors:
+- [Nithin](https://github.com/Nithin1522)-Project Lead & Developer
+- [Mathavan S G](https://github.com/MathavanSG) - Machine Learning Engineer
 
-```
-python3 --version
-```
-
-```
-pip --version
-```
-
-## Installing Flask
-
-In your terminal run the requirements.txt file using this pip
-
-```
-pip install -r requirements.txt
-```
-
-## What you will create
-
-In this tutorial, I will guide you through the process of building a chatbot that can carry out conversations with users using natural language processing.
-
-To start, we will be using Microsoft DialoGPT, a pre-trained language model that can generate human-like responses to given prompts. We will be integrating DialoGPT with Flask, a popular Python web framework, to create a web application that can communicate with users via a chat interface.
-
-For the frontend of our application, we will be using HTML, CSS, and JavaScript to create a visually appealing and interactive chat interface. Additionally, we will be using jQuery to handle the HTTP requests that are made to the backend server.
-
-Throughout the tutorial, I will provide step-by-step instructions on how to set up your development environment, install the necessary dependencies, and create the required files and code for the application. I will also explain how to train and fine-tune the DialoGPT model to improve the accuracy of its responses.
-
-By the end of this tutorial, you will have a fully functional chatbot that can engage in conversations with users, and you will have gained valuable experience in using Microsoft DialoGPT, Flask, and web development technologies such as HTML, CSS, and JavaScript.
-
-# ChatBot Link
-The Chatbot is constructed using the Microsoft/DialoGPT-medium model.
-
-```
-https://huggingface.co/microsoft/DialoGPT-medium
-```
-
-# User-Html
-
-```
-var userHtml = '<div class="d-flex justify-content-end mb-4"><div class="msg_cotainer_send">' + user_input + '<span class="msg_time_send">'+ time + 
-    '</span></div><div class="img_cont_msg"><img src="https://i.ibb.co/d5b84Xw/Untitled-design.png" class="rounded-circle user_img_msg"></div></div>';
-```
-
-# Bot-HTML
-
-```
-var botHtml = '<div class="d-flex justify-content-start mb-4"><div class="img_cont_msg"><img src="https://i.ibb.co/fSNP7Rz/icons8-chatgpt-512.png" class="rounded-circle user_img_msg"></div><div class="msg_cotainer">' + bot_response + '<span class="msg_time">' + time + '</span></div></div>';
-```
+## License:
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
