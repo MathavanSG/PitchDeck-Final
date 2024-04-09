@@ -30,11 +30,4 @@ This project implements a chatbot capable of analyzing pitch deck PDF files uplo
 - Upload a pitch deck PDF file for analysis.
 - The chatbot will extract text from the PDF and initialize a conversation with the user.
 - Users can ask queries related to the pitch deck content.
-- The chatbot will respond based on the analyzed content of the uploaded PDF.
-
-## Contributors:
-- [Nithin](https://github.com/Nithin1522)-Project Lead & Developer
-- [Mathavan S G](https://github.com/MathavanSG) - Machine Learning Engineer
-
-## License:
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+- The chatbot will respond based on the analyzed content of the uploaded pdf.
