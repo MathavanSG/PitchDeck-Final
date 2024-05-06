@@ -54,41 +54,17 @@ body, html {
     outline: 0px !important;
 }
 
-.type_msg {
+.type_msg, .attach_btn, .send_btn, #summaryButton, .report-popup select, .generate-report-button {
+    border-radius: 0 15px 15px 0 !important;
     background-color: rgba(0, 0, 0, 0.3) !important;
     border: 0 !important;
     color: white !important;
-    height: 60px !important;
-    overflow-y: auto;
+    cursor: pointer;
 }
 
-.type_msg:focus {
+.type_msg:focus, .report-popup select:focus, .generate-report-button:focus {
     box-shadow: none !important;
     outline: 0px !important;
-}
-
-.attach_btn {
-    border-radius: 15px 0 0 15px !important;
-    background-color: rgba(0, 0, 0, 0.3) !important;
-    border: 0 !important;
-    color: white !important;
-    cursor: pointer;
-}
-
-.send_btn {
-    border-radius: 0 15px 15px 0 !important;
-    background-color: rgba(0, 0, 0, 0.3) !important;
-    border: 0 !important;
-    color: white !important;
-    cursor: pointer;
-}
-
-.search_btn {
-    border-radius: 0 15px 15px 0 !important;
-    background-color: rgba(0, 0, 0, 0.3) !important;
-    border: 0 !important;
-    color: white !important;
-    cursor: pointer;
 }
 
 .contacts {
@@ -259,35 +235,101 @@ body, html {
         margin-bottom: 15px !important;
     }
 }
-/* Separate CSS file for Sidebar */
-/* Separate CSS file for Sidebar */
-.sidebar {
-    height: 100%;
-    width: 250px;
-    background-color: rgba(0, 0, 0, 0.7); /* Adjust the alpha value to control the transparency */
+
+/* Style for the "S" button */
+#summaryButton, .generate-report-button {
+    border-radius: 0 15px 15px 0 !important;
+    background-color: rgba(0, 0, 0, 0.3) !important;
+    border: 0 !important;
+    color: white !important;
+    cursor: pointer;
+}
+
+/* Style for the "S" icon */
+.s_icon {
+    width: 20px; /* Adjust the size as needed */
+    height: 20px; /* Adjust the size as needed */
+    margin-right: 5px; /* Adjust the spacing between the image and the arrow icon */
+}
+/* Style for the predefined questions button */
+.predefined_questions_btn {
+    border-radius: 15px 0 0 15px !important;
+    background-color: rgba(0, 0, 0, 0.3) !important;
+    border: 0 !important;
+    color: white !important;
+    cursor: pointer;
+}
+
+/* Style for the predefined questions dropdown */
+.predefined-questions-dropdown {
     position: fixed;
+    bottom: 70px;
+    right: 20px;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.predefined-questions-dropdown ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.predefined-questions-dropdown ul li {
+    padding: 10px 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.predefined-questions-dropdown ul li:last-child {
+    border-bottom: none;
+}
+
+.predefined-questions-dropdown ul li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.predefined-questions-dropdown ul li a:hover {
+    color: #007bff;
+}
+/* Popup box style */
+.report-popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
     top: 0;
-    right: 0;
-    overflow-x: hidden;
-    padding-top: 20px;
-    border-left: 1px solid #dee2e6;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
 }
 
-/* Style for chat message bubbles */
-.message {
-    background-color: #1b6cbc; /* Background color of the bubble */
-    padding: 10px; /* Padding around the text */
-    margin: 5px 0; /* Margin between messages */
-    border-radius: 5px; /* Border radius to create rounded corners */
-    border: 1px solid #08e82d; /* Border color */
+.report-popup-content {
+    background-color: rgb(151, 172, 255);
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #ffffff;
+    width: 80%;
 }
 
-/* Style for bot messages */
-.bot-message {
-    text-align: left; /* Align bot messages to the left */
+.report-popup-content h3 {
+    margin-top: 0;
 }
 
-/* Style for user messages */
-.user-message {
-    text-align: right; /* Align user messages to the right */
+.report-popup-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.report-popup-content ul li {
+    margin-bottom: 10px;
 }
